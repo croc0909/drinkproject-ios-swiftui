@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01A000000000000000000101 /* IOSDrinkProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000001 /* IOSDrinkProjectApp.swift */; };
+		01A000000000000000000102 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000002 /* Drink.swift */; };
+		01A000000000000000000103 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000003 /* CartItem.swift */; };
+		01A000000000000000000104 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000004 /* Order.swift */; };
+		01A000000000000000000105 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000005 /* APIClient.swift */; };
+		01A000000000000000000106 /* DrinkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000006 /* DrinkListViewModel.swift */; };
+		01A000000000000000000107 /* DrinkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000007 /* DrinkListView.swift */; };
+		01A000000000000000000108 /* DrinkRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000008 /* DrinkRowView.swift */; };
+		01A000000000000000000109 /* CartItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000009 /* CartItemRowView.swift */; };
+		01A000000000000000000110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000010 /* Assets.xcassets */; };
+		01A000000000000000000111 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000012 /* HomeView.swift */; };
+		01A000000000000000000112 /* MallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000013 /* MallViewModel.swift */; };
+		01A000000000000000000113 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000014 /* NewsViewModel.swift */; };
+		01A000000000000000000114 /* NearbyStoresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000015 /* NearbyStoresViewModel.swift */; };
+		01A000000000000000000115 /* MemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000016 /* MemberViewModel.swift */; };
+		01A000000000000000000116 /* MallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000017 /* MallView.swift */; };
+		01A000000000000000000117 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000018 /* NewsView.swift */; };
+		01A000000000000000000118 /* NearbyStoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000019 /* NearbyStoresView.swift */; };
+		01A000000000000000000119 /* MemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000020 /* MemberView.swift */; };
+		01A000000000000000000120 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000021 /* Auth.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01A000000000000000000001 /* IOSDrinkProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSDrinkProjectApp.swift; sourceTree = "<group>"; };
+		01A000000000000000000002 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		01A000000000000000000003 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		01A000000000000000000004 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		01A000000000000000000005 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		01A000000000000000000006 /* DrinkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListViewModel.swift; sourceTree = "<group>"; };
+		01A000000000000000000007 /* DrinkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListView.swift; sourceTree = "<group>"; };
+		01A000000000000000000008 /* DrinkRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkRowView.swift; sourceTree = "<group>"; };
+		01A000000000000000000009 /* CartItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemRowView.swift; sourceTree = "<group>"; };
+		01A000000000000000000010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01A000000000000000000011 /* IOSDrinkProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSDrinkProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01A000000000000000000012 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		01A000000000000000000013 /* MallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallViewModel.swift; sourceTree = "<group>"; };
+		01A000000000000000000014 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		01A000000000000000000015 /* NearbyStoresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyStoresViewModel.swift; sourceTree = "<group>"; };
+		01A000000000000000000016 /* MemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewModel.swift; sourceTree = "<group>"; };
+		01A000000000000000000017 /* MallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MallView.swift; sourceTree = "<group>"; };
+		01A000000000000000000018 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		01A000000000000000000019 /* NearbyStoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyStoresView.swift; sourceTree = "<group>"; };
+		01A000000000000000000020 /* MemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberView.swift; sourceTree = "<group>"; };
+		01A000000000000000000021 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01A000000000000000000201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01A000000000000000000301 = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000302 /* IOSDrinkProject */,
+				01A000000000000000000303 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01A000000000000000000302 /* IOSDrinkProject */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000001 /* IOSDrinkProjectApp.swift */,
+				01A000000000000000000304 /* Models */,
+				01A000000000000000000305 /* ViewModels */,
+				01A000000000000000000306 /* Views */,
+				01A000000000000000000307 /* Services */,
+				01A000000000000000000308 /* Resources */,
+			);
+			path = IOSDrinkProject;
+			sourceTree = "<group>";
+		};
+		01A000000000000000000303 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000011 /* IOSDrinkProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01A000000000000000000304 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000002 /* Drink.swift */,
+				01A000000000000000000003 /* CartItem.swift */,
+				01A000000000000000000004 /* Order.swift */,
+				01A000000000000000000021 /* Auth.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01A000000000000000000305 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000006 /* DrinkListViewModel.swift */,
+				01A000000000000000000013 /* MallViewModel.swift */,
+				01A000000000000000000014 /* NewsViewModel.swift */,
+				01A000000000000000000015 /* NearbyStoresViewModel.swift */,
+				01A000000000000000000016 /* MemberViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		01A000000000000000000306 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000012 /* HomeView.swift */,
+				01A000000000000000000017 /* MallView.swift */,
+				01A000000000000000000018 /* NewsView.swift */,
+				01A000000000000000000007 /* DrinkListView.swift */,
+				01A000000000000000000019 /* NearbyStoresView.swift */,
+				01A000000000000000000020 /* MemberView.swift */,
+				01A000000000000000000008 /* DrinkRowView.swift */,
+				01A000000000000000000009 /* CartItemRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		01A000000000000000000307 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000005 /* APIClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		01A000000000000000000308 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				01A000000000000000000010 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01A000000000000000000401 /* IOSDrinkProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01A000000000000000000601 /* Build configuration list for PBXNativeTarget "IOSDrinkProject" */;
+			buildPhases = (
+				01A000000000000000000501 /* Sources */,
+				01A000000000000000000201 /* Frameworks */,
+				01A000000000000000000502 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IOSDrinkProject;
+			productName = IOSDrinkProject;
+			productReference = 01A000000000000000000011 /* IOSDrinkProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01A000000000000000000402 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					01A000000000000000000401 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 01A000000000000000000602 /* Build configuration list for PBXProject "IOSDrinkProject" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01A000000000000000000301;
+			productRefGroup = 01A000000000000000000303 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01A000000000000000000401 /* IOSDrinkProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01A000000000000000000502 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01A000000000000000000110 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01A000000000000000000501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01A000000000000000000101 /* IOSDrinkProjectApp.swift in Sources */,
+				01A000000000000000000102 /* Drink.swift in Sources */,
+				01A000000000000000000103 /* CartItem.swift in Sources */,
+				01A000000000000000000104 /* Order.swift in Sources */,
+				01A000000000000000000120 /* Auth.swift in Sources */,
+				01A000000000000000000105 /* APIClient.swift in Sources */,
+				01A000000000000000000106 /* DrinkListViewModel.swift in Sources */,
+				01A000000000000000000111 /* HomeView.swift in Sources */,
+				01A000000000000000000112 /* MallViewModel.swift in Sources */,
+				01A000000000000000000113 /* NewsViewModel.swift in Sources */,
+				01A000000000000000000114 /* NearbyStoresViewModel.swift in Sources */,
+				01A000000000000000000115 /* MemberViewModel.swift in Sources */,
+				01A000000000000000000116 /* MallView.swift in Sources */,
+				01A000000000000000000117 /* NewsView.swift in Sources */,
+				01A000000000000000000107 /* DrinkListView.swift in Sources */,
+				01A000000000000000000118 /* NearbyStoresView.swift in Sources */,
+				01A000000000000000000119 /* MemberView.swift in Sources */,
+				01A000000000000000000108 /* DrinkRowView.swift in Sources */,
+				01A000000000000000000109 /* CartItemRowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		01A000000000000000000701 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		01A000000000000000000702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01A000000000000000000703 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andylin.IOSDrinkProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01A000000000000000000704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andylin.IOSDrinkProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01A000000000000000000601 /* Build configuration list for PBXNativeTarget "IOSDrinkProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01A000000000000000000703 /* Debug */,
+				01A000000000000000000704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01A000000000000000000602 /* Build configuration list for PBXProject "IOSDrinkProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01A000000000000000000701 /* Debug */,
+				01A000000000000000000702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01A000000000000000000402 /* Project object */;
+}
