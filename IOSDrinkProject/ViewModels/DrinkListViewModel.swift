@@ -17,6 +17,10 @@ final class DrinkListViewModel: ObservableObject {
         cartItems.reduce(0) { $0 + $1.subtotal }
     }
 
+    var totalQuantity: Int {
+        cartItems.reduce(0) { $0 + $1.quantity }
+    }
+
     init(apiClient: APIClient = .shared) {
         self.apiClient = apiClient
     }

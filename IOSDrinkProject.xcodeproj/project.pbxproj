@@ -27,6 +27,7 @@
 		01A000000000000000000118 /* NearbyStoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000019 /* NearbyStoresView.swift */; };
 		01A000000000000000000119 /* MemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000020 /* MemberView.swift */; };
 		01A000000000000000000120 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000021 /* Auth.swift */; };
+		01A000000000000000000121 /* ShoppingCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000022 /* ShoppingCartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		01A000000000000000000019 /* NearbyStoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyStoresView.swift; sourceTree = "<group>"; };
 		01A000000000000000000020 /* MemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberView.swift; sourceTree = "<group>"; };
 		01A000000000000000000021 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		01A000000000000000000022 /* ShoppingCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				01A000000000000000000017 /* MallView.swift */,
 				01A000000000000000000018 /* NewsView.swift */,
 				01A000000000000000000007 /* DrinkListView.swift */,
+				01A000000000000000000022 /* ShoppingCartView.swift */,
 				01A000000000000000000019 /* NearbyStoresView.swift */,
 				01A000000000000000000020 /* MemberView.swift */,
 				01A000000000000000000008 /* DrinkRowView.swift */,
@@ -231,6 +234,7 @@
 				01A000000000000000000116 /* MallView.swift in Sources */,
 				01A000000000000000000117 /* NewsView.swift in Sources */,
 				01A000000000000000000107 /* DrinkListView.swift in Sources */,
+				01A000000000000000000121 /* ShoppingCartView.swift in Sources */,
 				01A000000000000000000118 /* NearbyStoresView.swift in Sources */,
 				01A000000000000000000119 /* MemberView.swift in Sources */,
 				01A000000000000000000108 /* DrinkRowView.swift in Sources */,
