@@ -11,6 +11,8 @@ final class DrinkListViewModel: ObservableObject {
     @Published var didSubmitOrder = false
 
     private let apiClient: APIClient
+    private let tokenStore: UserDefaults
+    private let tokenKey = "authToken"
     private let logger = Logger(subsystem: "com.andylin.IOSDrinkProject", category: "DrinkListViewModel")
 
     var totalPrice: Int {
@@ -21,8 +23,12 @@ final class DrinkListViewModel: ObservableObject {
         cartItems.reduce(0) { $0 + $1.quantity }
     }
 
-    init(apiClient: APIClient = .shared) {
+    init(
+        apiClient: APIClient = .shared,
+        tokenStore: UserDefaults = .standard
+    ) {
         self.apiClient = apiClient
+        self.tokenStore = tokenStore
     }
 
     func loadDrinks() async {
@@ -58,22 +64,28 @@ final class DrinkListViewModel: ObservableObject {
     func submitOrder() async {
         guard !cartItems.isEmpty else { return }
 
-        let orderRequest = CreateOrderRequest(
-            customerName: "測試客人",
-            phone: "0912345678",
-            items: cartItems.map {
-                CreateOrderItemRequest(
-                    drinkID: $0.drink.id,
-                    quantity: $0.quantity,
-                    sweetness: "半糖",
-                    iceLevel: "少冰"
-                )
-            }
-        )
+        guard let token = tokenStore.string(forKey: tokenKey) else {
+            errorMessage = "請先登入會員後再送出訂單。"
+            logger.info("[DrinkList] Submit order blocked because auth token is missing")
+            return
+        }
 
         do {
+            let user = try await apiClient.fetchMe(token: token)
+            let orderRequest = CreateOrderRequest(
+                customerName: user.name,
+                items: cartItems.map {
+                    CreateOrderItemRequest(
+                        drinkID: $0.drink.id,
+                        quantity: $0.quantity,
+                        sweetness: "半糖",
+                        iceLevel: "少冰"
+                    )
+                }
+            )
+
             logger.info("[DrinkList] Submit order to Go backend, items: \(self.cartItems.count, privacy: .public), total: \(self.totalPrice, privacy: .public)")
-            _ = try await apiClient.submitOrder(orderRequest)
+            _ = try await apiClient.submitOrder(orderRequest, token: token)
             cartItems.removeAll()
             note = ""
             didSubmitOrder = true

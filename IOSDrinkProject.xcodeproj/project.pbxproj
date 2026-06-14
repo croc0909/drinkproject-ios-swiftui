@@ -28,6 +28,9 @@
 		01A000000000000000000119 /* MemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000020 /* MemberView.swift */; };
 		01A000000000000000000120 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000021 /* Auth.swift */; };
 		01A000000000000000000121 /* ShoppingCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000022 /* ShoppingCartView.swift */; };
+		01A000000000000000000122 /* OrderRecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000023 /* OrderRecordsViewModel.swift */; };
+		01A000000000000000000123 /* OrderRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000024 /* OrderRecordsView.swift */; };
+		01A000000000000000000124 /* OrderDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A000000000000000000025 /* OrderDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		01A000000000000000000020 /* MemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberView.swift; sourceTree = "<group>"; };
 		01A000000000000000000021 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		01A000000000000000000022 /* ShoppingCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartView.swift; sourceTree = "<group>"; };
+		01A000000000000000000023 /* OrderRecordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRecordsViewModel.swift; sourceTree = "<group>"; };
+		01A000000000000000000024 /* OrderRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRecordsView.swift; sourceTree = "<group>"; };
+		01A000000000000000000025 /* OrderDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 				01A000000000000000000014 /* NewsViewModel.swift */,
 				01A000000000000000000015 /* NearbyStoresViewModel.swift */,
 				01A000000000000000000016 /* MemberViewModel.swift */,
+				01A000000000000000000023 /* OrderRecordsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -128,6 +135,8 @@
 				01A000000000000000000022 /* ShoppingCartView.swift */,
 				01A000000000000000000019 /* NearbyStoresView.swift */,
 				01A000000000000000000020 /* MemberView.swift */,
+				01A000000000000000000024 /* OrderRecordsView.swift */,
+				01A000000000000000000025 /* OrderDetailsView.swift */,
 				01A000000000000000000008 /* DrinkRowView.swift */,
 				01A000000000000000000009 /* CartItemRowView.swift */,
 			);
@@ -231,12 +240,15 @@
 				01A000000000000000000113 /* NewsViewModel.swift in Sources */,
 				01A000000000000000000114 /* NearbyStoresViewModel.swift in Sources */,
 				01A000000000000000000115 /* MemberViewModel.swift in Sources */,
+				01A000000000000000000122 /* OrderRecordsViewModel.swift in Sources */,
 				01A000000000000000000116 /* MallView.swift in Sources */,
 				01A000000000000000000117 /* NewsView.swift in Sources */,
 				01A000000000000000000107 /* DrinkListView.swift in Sources */,
 				01A000000000000000000121 /* ShoppingCartView.swift in Sources */,
 				01A000000000000000000118 /* NearbyStoresView.swift in Sources */,
 				01A000000000000000000119 /* MemberView.swift in Sources */,
+				01A000000000000000000123 /* OrderRecordsView.swift in Sources */,
+				01A000000000000000000124 /* OrderDetailsView.swift in Sources */,
 				01A000000000000000000108 /* DrinkRowView.swift in Sources */,
 				01A000000000000000000109 /* CartItemRowView.swift in Sources */,
 			);

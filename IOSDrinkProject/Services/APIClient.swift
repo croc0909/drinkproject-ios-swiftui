@@ -38,22 +38,40 @@ final class APIClient {
         return drinks
     }
 
-    func submitOrder(_ orderRequest: CreateOrderRequest) async throws -> Order {
+    func submitOrder(_ orderRequest: CreateOrderRequest, token: String) async throws -> Order {
         let url = baseURL.appending(path: "orders")
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         request.httpBody = try JSONEncoder().encode(orderRequest)
 
-        logger.info("[API] POST order request -> \(url.absoluteString, privacy: .public), items: \(orderRequest.items.count, privacy: .public)")
+        logger.info("[API] POST order request -> \(url.absoluteString, privacy: .public), items: \(orderRequest.items.count, privacy: .public), token attached: \(!token.isEmpty, privacy: .public)")
 
         let (data, response) = try await urlSession.data(for: request)
-        try validate(response, endpoint: "POST /api/orders")
+        try validate(response, data: data, endpoint: "POST /api/orders")
 
         let order = try JSONDecoder().decode(Order.self, from: data)
 
         logger.info("[API] POST order success <- Go backend created order id \(order.id, privacy: .public)")
         return order
+    }
+
+    func fetchOrders(token: String) async throws -> [Order] {
+        let url = baseURL.appending(path: "me/orders")
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+
+        logger.info("[API] GET me/orders request -> \(url.absoluteString, privacy: .public), token attached: \(!token.isEmpty, privacy: .public)")
+
+        let (data, response) = try await urlSession.data(for: request)
+        logger.info("[API] GET me/orders response received <- \(data.count, privacy: .public) bytes")
+        try validate(response, data: data, endpoint: "GET /api/me/orders")
+
+        let orders = try JSONDecoder().decode([Order].self, from: data)
+        logger.info("[API] GET me/orders success <- decoded \(orders.count, privacy: .public) orders")
+        return orders
     }
 
     func register(phone: String, name: String, password: String) async throws -> AuthResponse {

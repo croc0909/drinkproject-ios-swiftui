@@ -117,6 +117,16 @@ struct MemberView: View {
 
             messageView
 
+            NavigationLink {
+                OrderRecordsView(user: user)
+            } label: {
+                Label("訂單紀錄", systemImage: "receipt.fill")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12)
+            }
+            .buttonStyle(.borderedProminent)
+
             Button(role: .destructive) {
                 viewModel.logout()
                 password = ""
