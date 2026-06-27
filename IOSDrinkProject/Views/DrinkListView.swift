@@ -25,16 +25,22 @@ struct DrinkListView: View {
                 Text(errorMessage)
                     .font(.footnote)
                     .foregroundStyle(.orange)
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets(top: 8, leading: 22, bottom: 8, trailing: 22))
             }
 
-            Section("飲品") {
-                ForEach(viewModel.drinks) { drink in
-                    DrinkRowView(drink: drink) {
-                        viewModel.addToCart(drink)
-                    }
+            ForEach(viewModel.drinks) { drink in
+                DrinkRowView(drink: drink) {
+                    viewModel.addToCart(drink)
                 }
+                .listRowSeparator(.hidden)
+                .listRowInsets(EdgeInsets(top: 10, leading: 22, bottom: 10, trailing: 28))
+                .listRowBackground(Color.white)
             }
         }
+        .listStyle(.plain)
+        .scrollContentBackground(.hidden)
+        .background(Color.white)
         .overlay {
             if viewModel.isLoading {
                 ProgressView("載入飲品中")
@@ -60,7 +66,7 @@ struct DrinkListView: View {
                     .foregroundStyle(.white)
                     .padding(.horizontal, 18)
                     .padding(.vertical, 14)
-                    .background(Color.accentColor)
+                    .background(Color.orange)
                     .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                     .padding(.horizontal)
                     .padding(.vertical, 8)
@@ -70,6 +76,8 @@ struct DrinkListView: View {
             }
         }
         .navigationTitle("飲料訂購")
+        .toolbarBackground(.white, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
         .task {
             await viewModel.loadDrinks()
         }

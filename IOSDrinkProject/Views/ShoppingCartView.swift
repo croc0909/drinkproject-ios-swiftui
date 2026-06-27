@@ -2,6 +2,8 @@ import SwiftUI
 
 struct ShoppingCartView: View {
     @ObservedObject private var viewModel: DrinkListViewModel
+    private let backgroundColor = Color(red: 1.0, green: 0.97, blue: 0.92)
+    private let cardColor = Color.white
 
     init(viewModel: DrinkListViewModel) {
         self.viewModel = viewModel
@@ -13,6 +15,8 @@ struct ShoppingCartView: View {
                 Text(errorMessage)
                     .font(.footnote)
                     .foregroundStyle(.orange)
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
             }
 
             if viewModel.cartItems.isEmpty {
@@ -21,18 +25,26 @@ struct ShoppingCartView: View {
                     systemImage: "cart",
                     description: Text("回到飲料列表，點選 + 加入想喝的飲品。")
                 )
+                .foregroundStyle(.secondary)
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color.clear)
             } else {
-                Section("購物車") {
-                    ForEach(viewModel.cartItems) { item in
-                        CartItemRowView(item: item)
-                            .swipeActions {
-                                Button(role: .destructive) {
-                                    viewModel.removeFromCart(item)
-                                } label: {
-                                    Label("刪除", systemImage: "trash")
-                                }
-                            }
-                    }
+                ForEach(viewModel.cartItems) { item in
+                    CartItemRowView(
+                        item: item,
+                        decreaseAction: {
+                            viewModel.decreaseQuantity(for: item)
+                        },
+                        increaseAction: {
+                            viewModel.increaseQuantity(for: item)
+                        },
+                        removeAction: {
+                            viewModel.removeFromCart(item)
+                        }
+                    )
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets(top: 8, leading: 18, bottom: 8, trailing: 18))
+                    .listRowBackground(Color.clear)
                 }
 
                 Section("訂單資訊") {
@@ -46,6 +58,8 @@ struct ShoppingCartView: View {
                             .fontWeight(.semibold)
                     }
                 }
+                .foregroundStyle(.primary)
+                .listRowBackground(cardColor)
 
                 Section {
                     Button {
@@ -55,11 +69,26 @@ struct ShoppingCartView: View {
                     } label: {
                         Label("送出訂單", systemImage: "paperplane.fill")
                             .frame(maxWidth: .infinity)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(.white)
+                            .padding(.vertical, 14)
+                            .background(Color.orange)
+                            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                     }
+                    .buttonStyle(.plain)
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets(top: 10, leading: 18, bottom: 14, trailing: 18))
+                    .listRowBackground(Color.clear)
                 }
             }
         }
+        .listStyle(.plain)
+        .scrollContentBackground(.hidden)
+        .background(backgroundColor)
         .navigationTitle("購物車")
+        .toolbarBackground(backgroundColor, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
+        .tint(.orange)
         .alert("訂單已送出", isPresented: $viewModel.didSubmitOrder) {
             Button("完成", role: .cancel) {}
         }

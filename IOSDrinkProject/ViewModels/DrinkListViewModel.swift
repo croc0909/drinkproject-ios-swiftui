@@ -61,6 +61,21 @@ final class DrinkListViewModel: ObservableObject {
         cartItems.removeAll { $0.id == item.id }
     }
 
+    func increaseQuantity(for item: CartItem) {
+        guard let index = cartItems.firstIndex(where: { $0.id == item.id }) else { return }
+        cartItems[index].quantity += 1
+    }
+
+    func decreaseQuantity(for item: CartItem) {
+        guard let index = cartItems.firstIndex(where: { $0.id == item.id }) else { return }
+
+        if cartItems[index].quantity > 1 {
+            cartItems[index].quantity -= 1
+        } else {
+            cartItems.remove(at: index)
+        }
+    }
+
     func submitOrder() async {
         guard !cartItems.isEmpty else { return }
 
