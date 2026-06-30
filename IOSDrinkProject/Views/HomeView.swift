@@ -14,6 +14,18 @@ struct HomeView: View {
                 .overlay(alignment: .bottom) {
                     HomeShortcutBar()
                 }
+//#if DEBUG
+                .overlay(alignment: .topTrailing) {
+                    Button("Crash") {
+                        fatalError("Crash was triggered")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.red)
+                    .safeAreaPadding(.top, 12)
+                    .padding(.trailing, 20)
+                    .accessibilityHint("觸發測試閃退以驗證 Firebase Crashlytics")
+                }
+//#endif
                 .navigationDestination(for: HomeTab.self) { tab in
                     destination(for: tab)
                 }
