@@ -125,7 +125,7 @@ final class MemberViewModel: ObservableObject {
         } catch {
             tokenStore.removeObject(forKey: tokenKey)
             logger.error("[Member Flow] /api/me failed, token removed -> \(error.localizedDescription, privacy: .public)")
-            transition(to: .failed(error.localizedDescription), reason: "fetch current user failed")
+            transition(to: .signedOut, reason: "saved session expired")
         }
     }
 
